@@ -1,9 +1,9 @@
 // Definimos un arreglo de objetos para los mensajes recibidos con su origen, nombre del agente y en donde esta ubicado
 mensajes = [
     {origen:'Francia', nombre: 'Luisa', ubicacion: 'España', veracidad: ''},
-    {origen:'España', nombre: 'Alberto', ubicacion: 'Francia'},
-    {origen:'Egipto', nombre: 'Carmen', ubicacion: 'Egipto'},
-    {origen:'Japon', nombre: 'Carmen', ubicacion: 'Francia'},
+    {origen:'España', nombre: 'Alberto', ubicacion: 'Francia', veracidad: ''},
+    {origen:'Egipto', nombre: 'Carmen', ubicacion: 'Egipto', veracidad: ''},
+    {origen:'Japon', nombre: 'Carmen', ubicacion: 'Francia', veracidad: ''},
 ];
 
 // Definimos un arreglo de objetos con el nombre de lops agentes y su ubicacion
