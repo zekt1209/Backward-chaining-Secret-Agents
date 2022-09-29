@@ -6,12 +6,12 @@ mensajes = [
     {origen:'Japon', nombre: 'Carmen', ubicacion: 'Francia', veracidad: ''},
 ];
 
-// Definimos un arreglo de objetos con el nombre de lops agentes y su ubicacion
+// Definimos un arreglo de objetos con el nombre de los agentes y su ubicacion
 agentes = [
     {nombre: 'Alberto', ubicacion: ''},
     {nombre: 'Luisa', ubicacion: ''},
     {nombre: 'Carmen', ubicacion: ''},
-    {nombre: 'Tomas', ubicacion: 'Francia'},
+    {nombre: 'Tomas', ubicacion: 'Japon'},
 ];
 
 // Definimos las variables de los agentes segun su posicion en el arreglo de objetos
@@ -20,13 +20,14 @@ Luisa = agentes[1];
 Carmen = agentes[2];
 tomas = agentes[3];
 
-
+/*
 ubicaciones = [
     'Egipto',
     'Francia',
     'Japon',
     'España',
 ];
+*/
 
 /*
 for (var i = 0; i < agentes.length; i++){
@@ -46,8 +47,9 @@ if (tomas.ubicacion === 'Francia') {
 
 // Regla 2
 if (tomas.ubicacion != 'Francia') {
-    mensajes[0].veracidad = true;
-    console.log(`Mensaje 1 = ${mensajes[0].veracidad}, Luisa esta en españa`);
+    mensajes[0].veracidad = true; // Confirmamos que este agente si se encuentra en Francia
+    console.log(`Mensaje 1 = ${mensajes[0].veracidad}, Luisa esta en España`);
+    agentes[1].ubicacion = 'España';
 }
 
 
@@ -62,7 +64,8 @@ if (tomas.ubicacion === 'España') {
 // Regla 4
 if (tomas.ubicacion != 'España') {
     mensajes[1].veracidad = true;
-    console.log(`Mensaje 2 = ${mensajes[1].veracidad}, Alberto esta en francia`);
+    console.log(`Mensaje 2 = ${mensajes[1].veracidad}, Alberto esta en Francia`);
+    agentes[0].ubicacion = 'Francia';
 }
 
 
@@ -77,7 +80,8 @@ if (tomas.ubicacion === 'Egipto') {
 // Regla 6
 if (tomas.ubicacion != 'Egipto') {
     mensajes[2].veracidad = true;
-    console.log(`Mensaje 3 = ${mensajes[2].veracidad}, Carmen esta en egipto`)
+    console.log(`Mensaje 3 = ${mensajes[2].veracidad}, Carmen esta en Egipto`)
+    agentes[2].ubicacion = 'Egipto';
 }
 
 
@@ -93,7 +97,31 @@ if (tomas.ubicacion === 'Japon') {
 if (tomas.ubicacion != 'Japon') {
     mensajes[3].veracidad = true;
     console.log(`Mensaje 4 = ${mensajes[3].veracidad}, Carmen esta en Francia`);
+    agentes[2].ubicacion = 'Francia';
 }
 
+
+
+// Funcion que valida si encuentra elementos duplicados
+// En este caso la usamos para validar si despues de aplicar las reglas, no haya 2 agentes en un mismo pais, retorna true o false
+const tieneValoresDuplicados = (arreglo) => {
+    if (arreglo instanceof Array) {
+        for (let i = 0; i < arreglo.length -1; i++) {
+            if (arreglo.slice(i + 1).indexOf(arreglo[i.ubicacion] !== -1)) {
+                console.log('True')
+                return true
+            }
+            
+        }
+    } else {
+        throw TypeError('El argumento debe de ser un arreglo. ');
+    }
+}
+
+// Mandamos llamar la funcion validadora
+tieneValoresDuplicados(agentes);
+
+// Imprimimos la lista de los agentes con su respectiva ubicacion
+console.log(agentes);
 
 
