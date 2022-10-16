@@ -1,0 +1,142 @@
+:root {
+    --red: 
+}
+
+.inactive {
+    display: none;
+}
+
+ /* Empty Image */
+.emptyImage {
+position: absolute;
+z-index: 1;
+}
+
+.rectangle {
+    width: 55px;
+    height: 30px;
+    background-color: #4472c4;
+}
+
+.redCircle {
+    width: 25px;
+    height: 25px;
+    border-radius: 20px;
+    background-color: #ff0000;
+}
+
+.greenCircle {
+    width: 25px;
+    height: 25px;
+    border-radius: 20px;
+    background-color: #00b050;
+}
+
+.trainFigureBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.s1 {
+    position: absolute;
+    top: 162px;
+    left: 164px;
+}
+
+.s3 {
+    position: absolute;
+    top: 162px;
+    left: 566px;
+}
+
+.s5 {
+    position: absolute;
+    top: 316px;
+    left: 976px;
+}
+
+.u1 {
+    position: absolute;
+    top: 132px;
+    left: 230px;
+}
+
+.u2 {
+    position: absolute;
+    top: 215px;
+    left: 330px;
+}
+
+.u3 {
+    position: absolute;
+    top: 215px;
+    left: 410px;
+}
+.u4 {
+    position: absolute;
+    top: 215px;
+    left: 753px; 
+}
+
+.u5 {
+    position: absolute;
+    top: 215px;
+    left: 832px;
+}
+
+.u6 {
+    position: absolute;
+    top: 132px;
+    left: 940px;
+}
+
+.u7 {
+    position: absolute;
+    top: 140px;
+    left: 533px;
+}
+
+.l1 {
+    position: absolute;
+    top: 352px;
+    left: 230px;
+}
+
+.l3 {
+    position: absolute;
+    top: 270px;
+    left: 410px;
+}
+
+.l4 {
+    position: absolute;
+    top: 270px;
+    left: 753px;
+}
+
+.l5 {
+    position: absolute;
+    top: 270px;
+    left: 832px;
+}
+
+.l6 {
+    position: absolute;
+    top: 352px;
+    left: 940px;
+}
+
+/* Buttons Box */
+
+.buttonsBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btnsBox {
+    display: flex;
+    width: 930px;
+    justify-content: space-evenly;
+}
